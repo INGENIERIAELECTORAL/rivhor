@@ -80,3 +80,19 @@ En todos los casos de error el mensaje recibe el foco, es legible y no se recort
 - Las redirecciones de Vercel (`cleanUrls`, `trailingSlash`) y el servicio automático de `404.html` no se han comprobado en Vercel, solo la existencia física de las rutas.
 - Sin dominio confirmado no se han añadido `canonical`, `hreflang` absolutos, Open Graph, sitemap ni robots. El README documenta cómo añadirlos.
 - No se ha hecho push ni despliegue. GitHub y Vercel se conectarán después.
+
+## Actualización de identidad visual y fondo (24 de octubre de 2026, segunda revisión)
+
+Cambios
+
+- El símbolo facial de RIVHOR (`public/assets/brand/simbolo-rivhor.png`, 1254×1254, sin modificar) es ahora la marca principal. En cabecera y pie aparece una copia reducida solo por tamaño (`simbolo-rivhor-160.png`) junto al nombre RIVHOR en texto. Tamaños 54 px en escritorio, 42 px hasta 430 px de ancho y 68 px en el pie. Proporciones, formas y colores intactos. Sin filtros ni recortes.
+- Favicons e iconos (32, 64, 180, 192 y 512 px) regenerados a partir del símbolo por reducción proporcional únicamente. Los enlaces a CSS, JS e iconos llevan `?v=2` para descartar versiones antiguas en caché.
+- Fondo. `html` y `body` declaran `#ffffff` con `!important` y las regiones principales (cabecera, menú, secciones, formularios, tarjetas, pie, 404) declaran `background-color #ffffff` de forma explícita.
+- Los cambios están en `tools/build.py` y en `public/assets/css/styles.css`, por lo que se conservan al regenerar.
+
+Comprobaciones
+
+- Auditoría de estilos calculados: en las 16 páginas, con preferencia clara y oscura, a 360 px (menú móvil abierto) y 1280 px, se listaron todos los elementos con fondo distinto de transparente o blanco. Solo aparecen los botones negros, el enlace de idioma activo, el enlace Ir al contenido y el punto azul del estado. No existe ningún fondo café, beige, crema o textura en el sitio.
+- Matriz completa repetida (16 rutas × 9 anchos, bios y campos opcionales abiertos): sin desplazamiento horizontal, sin elementos fuera del ancho, sin errores de consola ni recursos faltantes. Cabecera con símbolo, nombre, selector de idioma y menú en una sola fila desde 320 px.
+- Pruebas funcionales repetidas: preferencia oscura (fondo blanco), movimiento reducido, fuentes bloqueadas, zoom 200 %, teclado y menú, anclas, sin JavaScript, cambio de idioma en 14 páginas, 58 enlaces internos sin fallos.
+- Nota sobre la vista previa publicada desde esta sesión: la página se sirve dentro de un visor que añade su propio marco. El fondo de la página es blanco en todos los estilos calculados. Si alrededor se ve un tono crema, pertenece a la interfaz del visor, no al sitio. Al servir `public/` en local o en Vercel no existe ese marco.

@@ -416,14 +416,15 @@ def head(lang, page_id):
 <link rel="alternate" hreflang="{lang}" href="{page_url(page_id, lang)}">
 <link rel="alternate" hreflang="{other}" href="{page_url(page_id, other)}">
 <link rel="alternate" hreflang="x-default" href="{page_url(page_id, 'en')}">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/icon-192.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png?v=2">
 <link rel="preload" href="/assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css">
-<link rel="stylesheet" href="/assets/css/waitlist.css">
-<script src="/assets/js/site.js" defer></script>
-<script src="/assets/js/waitlist.js" defer></script>
+<link rel="stylesheet" href="/assets/css/styles.css?v=2">
+<link rel="stylesheet" href="/assets/css/waitlist.css?v=2">
+<script src="/assets/js/site.js?v=2" defer></script>
+<script src="/assets/js/waitlist.js?v=2" defer></script>
 </head>'''
 
 
@@ -445,7 +446,7 @@ def header(lang, page_id):
 <a class="skip" href="#main">{e(t["skip"])}</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{home}" aria-label="{e(t["alt_logo"])}"><img src="/assets/brand/logo-rivhor-wordmark.png" alt="{e(t["alt_logo"])}" width="2048" height="682"></a>
+    <a class="brand" href="{home}"><img src="/assets/brand/simbolo-rivhor-160.png" alt="" width="160" height="160"><span class="brand-name">RIVHOR</span></a>
     <nav class="lang" aria-label="{e(t["lang_label"])}">
       <a href="{page_url(page_id, 'en')}"{en_cur}{en_lang} data-lang-link hreflang="en">EN</a>
       <a href="{page_url(page_id, 'es')}"{es_cur}{es_lang} data-lang-link hreflang="es">ES</a>
@@ -477,7 +478,7 @@ def footer(lang, page_id):
 <footer class="site-footer">
   <div class="wrap">
     <div>
-      <img src="/assets/brand/logo-rivhor-wordmark.png" alt="{e(t["alt_logo"])}" width="2048" height="682">
+      <div class="brand brand-footer"><img src="/assets/brand/simbolo-rivhor-160.png" alt="" width="160" height="160"><span class="brand-name">RIVHOR</span></div>
       <p><strong>{e(t["footer"])}</strong></p>
       <p>{e(t["footer_stage"])}</p>
       <p>{e(t["footer_write"])} <a href="mailto:{EMAIL}">{EMAIL}</a></p>

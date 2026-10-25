@@ -26,7 +26,7 @@ rivhor-web/
 │       ├── css/waitlist.css estilos del formulario recibido
 │       ├── js/site.js       menú móvil, aparición suave, ancla al cambiar idioma
 │       ├── js/waitlist.js   envío del formulario (POST nativo + fetch)
-│       ├── brand/           logotipos PNG originales y favicons en contenedor cuadrado
+│       ├── brand/           símbolo facial (cabecera, pie, favicons e iconos) y logotipos PNG originales
 │       ├── team/            retratos originales 400×400
 │       └── fonts/           Outfit y Caveat (woff2) con sus licencias OFL
 ├── tools/
